@@ -1,14 +1,16 @@
 const express = require("express")
-const {registerUser}  = require("../controller/authController")
+const {registerUser,userLogin,forgotPassWord,verifyOtp,updatePassword}  = require("../controller/authController")
 
 const router = express.Router()
 
-router.route("/user/register").post((req,res)=>{ 
-    res.statusCode(200).json({success:true})
-})
+router.route("/user/register").post(registerUser)
 
-router.route("/user").get((req,res)=>{
-    res.statusCode(200).json({success:"from get"})
-})
+router.route("/user/login").post(userLogin)
+
+router.route("/user/forgot").post(forgotPassWord)
+
+router.route("/user/otp/verify").post(verifyOtp)
+
+router.route("/user/updatePassword").patch(updatePassword)
 
 module.exports = router

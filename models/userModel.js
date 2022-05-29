@@ -28,4 +28,11 @@ const userSchema = new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model("User",userSchema)
+const pinSchema = new mongoose.Schema({
+    userId:String,
+    pin:String,
+    email:String
+})
+
+exports.User = mongoose.model("User",userSchema)
+exports.pinSchema = mongoose.model("Pin",pinSchema)

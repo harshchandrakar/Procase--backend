@@ -5,12 +5,12 @@ const errorMiddleware = require("./middleware/error");
 const cors = require("cors")
 
 // enabling cross origin access
-app.use(cors)
+app.use(cors())
 
 const auth = require("./routes/authRoute")
 
 //json transfer
-app.use(express.json());
+app.use(express.json())
 app.use(cookieParser())
 
 //routes
