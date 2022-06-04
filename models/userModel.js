@@ -19,13 +19,17 @@ const userSchema = new mongoose.Schema({
         minlength:[8,"password must have atleast 8 characters"]
     },
     avatar:{
-        data:Buffer,
-        contentType:String
+        type:String,
+        default:"uploads/profile.jpg"
     },
     role:{
         type:String,
         default:"user",
     },
+    resume:{
+        type:String,
+        default:null
+    }
 })
 
 const pinSchema = new mongoose.Schema({
