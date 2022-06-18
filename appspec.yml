@@ -4,10 +4,10 @@ files:
   - source: /
     destination: /home/ec2-user/procase/
 hooks:
-  ApplicationStop:
-    - location: scripts/application_stop.sh
-      timeout: 300
-      runas: ec2-user
+  # ApplicationStop:
+  #   - location: scripts/application_stop.sh
+  #     timeout: 300
+  #     runas: ec2-user
   # BeforeInstall:
   #   - locations: scripts/application_install.sh
   #     timeout: 300
