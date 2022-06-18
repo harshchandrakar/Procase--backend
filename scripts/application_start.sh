@@ -4,7 +4,7 @@
 sudo chmod -R 777 /home/ec2-user/procase
 
 #navigate into our working directory where we have all our github files
-cd /home/ec2-user/procase
+cd /home/ec2-user/procase/
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
