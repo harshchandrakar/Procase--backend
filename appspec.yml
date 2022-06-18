@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/procase
+    destination: /home/ec2-user/procase
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
   BeforeInstall:
     - locations: scripts/application_install.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
